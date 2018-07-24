@@ -8,26 +8,34 @@
 <h1>Multiply numeric values in Javascript object</h2>
   <script>
 
-    let menu = {
+   let menu = {
       width: 200,
       height: 300,
       title: "My menu"
     };
     
     
-    alert( "menu width=" + menu.width + " height=" + menu.height + " title=" + menu.title );
     function multiplyNumeric(obj) {
       
    for (let key in menu){
       var value = menu[key];
       if (typeof value === 'number')
       {
-        menu[key]=menu[key]*2;}
+        menu[key]=menu[key]*2;
+        
       }
-    }
+        else {
+        menu[key]=menu[key];
+        
+      }
+      }
+      
+    } 
     
+
     multiplyNumeric(menu);
     alert( "menu width=" + menu.width + " height=" + menu.height + " title=" + menu.title );
+
 
   </script>
 
